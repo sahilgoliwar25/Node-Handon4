@@ -39,10 +39,12 @@ function Login() {
     if (serverRes) {
       localStorage.setItem("token", serverRes.token);
       if (serverRes.msg === "User is LoggedIn successfully") {
-        navi("/dashboard");
+        return () => {
+          navi("/dashboard");
+        };
       }
     }
-  }, [serverRes]);
+  }, [serverRes, navi]);
 
   return (
     <div className="auth-container">
@@ -70,7 +72,7 @@ function Login() {
         <button className="btn-submit" onClick={submitHandle}>
           Login
         </button>
-        {serverRes == undefined ? "" : <div>{serverRes.msg}</div>}
+        {serverRes === undefined ? "" : <div>{serverRes.msg}</div>}
       </form>
       <div className="intro-text">
         <h1>Hey, Welcome to our Website!!!</h1>
