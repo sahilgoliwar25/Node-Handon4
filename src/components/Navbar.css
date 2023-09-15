@@ -1,0 +1,20 @@
+.navi-container {
+  width: 100%;
+}
+.navi-items {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-signup {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
