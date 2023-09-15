@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect } from "react";
 
 function Dashboard() {
-  console.log(localStorage.getItem("token"));
   const token = localStorage.getItem("token");
   useEffect(() => {
     axios
@@ -15,7 +14,7 @@ function Dashboard() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  });
   return (
     <div>
       <h1>This is Dashboard</h1>

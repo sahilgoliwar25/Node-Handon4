@@ -85,7 +85,7 @@ function Register() {
         <button className="btn-submit" onClick={submitHandle}>
           Register
         </button>
-        {serverRes == undefined ? "" : <div>{serverRes.msg}</div>}
+        {serverRes === undefined ? "" : <div>{serverRes.msg}</div>}
       </form>
     </div>
   );
