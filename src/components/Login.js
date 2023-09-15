@@ -39,9 +39,7 @@ function Login() {
     if (serverRes) {
       localStorage.setItem("token", serverRes.token);
       if (serverRes.msg === "User is LoggedIn successfully") {
-        return () => {
-          navi("/dashboard");
-        };
+        navi("/dashboard");
       }
     }
   }, [serverRes, navi]);
